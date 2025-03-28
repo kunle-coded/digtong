@@ -458,10 +458,127 @@ a {
   align-items: flex-start;
   margin: var(--section-margin);
   margin-bottom: 100px;
+  height: 600px;
 }
 
 .about__image {
   width: 50%;
+  height: 100%;
+}
+
+.about__image__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 70px 0px 45px;
+  height: 100%;
+  position: relative;
+}
+
+.about__image__container img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.google__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 14%;
+  left: 0;
+  box-shadow: -1px 1px 16px 0px rgb(0, 0, 0, 10%);
+  transform: rotate(-15deg);
+}
+
+.slack__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 30%;
+  right: 38px;
+  box-shadow: 1px 1px 16px 0px rgb(0, 0, 0, 10%);
+}
+
+.ad__banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+  width: 190px;
+  padding: 16px;
+  position: absolute;
+  bottom: 30px;
+  left: -45px;
+  background-color: #fff;
+}
+
+.ad__banner h5 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.ad_text {
+  color: var(--brand-secondary);
+}
+
+.ad__banner__circle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+.circle__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 78px;
+  height: 78px;
+  border-radius: 9999px;
+  z-index: 5;
+}
+
+.grad__circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to bottom,
+    #a0cb8a 20%,
+    #ccc455 50%,
+    #ffc010 75%,
+    #e7af14
+  );
+  z-index: 1;
+}
+
+.ad__banner__circle p:last-child {
+  font-size: 12px;
+  color: var(--accent);
 }
 
 .about__content {
@@ -470,24 +587,27 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   width: 50%;
+  margin-top: 16px;
 }
 
 .tabs {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .about__tablist {
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 }
 .about__tablist button {
   appearance: none;
   border: none;
   background-color: transparent;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 18px;
+  line-height: 1.3;
   color: inherit;
   display: inline;
   margin: 4px 24px;
+  cursor: pointer;
 }
 
 .about__tablist button:first-child {
@@ -499,8 +619,37 @@ a {
 
 .about__tablist button[aria-selected="true"] {
   border-bottom: 2px solid var(--brand-primary);
+  font-weight: 500;
 }
 
-.about__details__container {
-  /* margin-top: 30px; */
+.about__panel__desc {
+  color: var(--brand-secondary);
+  margin-bottom: 16px;
+}
+
+.panel__bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.panel__bottom div:last-child {
+  margin-right: 0;
+}
+
+.panel__bottom__col {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.panel__bottom__col p:first-child {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.panel__bottom__col p:last-child {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--brand-secondary);
 }
